@@ -1,84 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Tambahkan link ke Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-km7s8eT+Tn9U4F1bpk6Fl/A6G6BDa8f8QdQ4AdKhTxEv6zBjZe4+biEmFdkGmeMkg" crossorigin="anonymous">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #333;
-            color: #fff;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-
-        .bio {
-            max-width: 400px;
-        }
-
-        h1 {
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #66c2ff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Dark Mode */
-
-        body.dark-mode {
-            background-color: #1a1a1a;
-            color: #fff;
-        }
-
-    </style>
-    <title>Farhan Fadila - Bio</title>
-</head>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('./bio.jpg');
+  min-height: 100%;
+}
+</style>
 <body>
 
-    <div class="container">
-        <div class="profile">
-            <img src="profile.jpg" alt="Farhan Fadila's Profile Picture">
-        </div>
-        <div class="bio">
-            <h1>Farhan Fadila</h1>
-            <ul>
-                <li><a href="https://www.instagram.com/farhan_fadila29" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://github.com/inipunyaku" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/farhan-fadila29" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-    </div>
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Farhan Fadila</b></h1>
+    <p>Student</p>
+    <img src="bio.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="bio.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
+  </header>
+
+  <div class="d-flex justify-content-center align-item-center h-100 v-100 mt-5">
+    <center><h3>    Mohon Tunggu Website belum Selesai
+    </h3></center>
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
 
 </body>
 </html>
